@@ -3,10 +3,11 @@
   <div style="text-align:center;">
     <button @click="changeLang('zh')">中文</button>
     <button @click="changeLang('en')">英文</button>
+    <button @click="changeLang('japan')">日文</button>
   </div>
     <h1>Hello Vue-i18n </h1>
     <p>
-      {{ $t("message.name") +  ' ' + $t("message.hobby") }}
+      {{ $t("message.name") +  ' : ' + $t("message.hobby") }}
     </p>
   </div>
 </template>
@@ -33,5 +34,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+p {
+  font-size: 30px;
 }
 </style>

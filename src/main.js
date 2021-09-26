@@ -7,20 +7,13 @@ Vue.use(VueI18n)
 
 Vue.config.productionTip = false
 
+import zh from "./i18n/lang/zh.json";
+import en from "./i18n/lang/en.json";
+import japan from "./i18n/lang/japan.json";
+
 // 准备翻译的语言环境信息
 const messages = {
-  zh: {
-    message: {
-      name: '科比',
-      hobby: "打篮球"
-    }
-  },
-  en: {
-    message: {
-      name: 'kobe bryant',
-      hobby: "basketball"
-    }
-  }
+  zh, en, japan
 }
 
 const lang = localStorage.getItem("lang") || "en";
