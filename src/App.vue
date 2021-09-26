@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div style="text-align:center;">
+    <button @click="changeLang('zh')">中文</button>
+    <button @click="changeLang('en')">英文</button>
+  </div>
+    <h1>Hello Vue-i18n </h1>
+    <p>
+      {{ $t("message.name") +  ' ' + $t("message.hobby") }}
+    </p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods:{
+    changeLang(lang){
+      console.log('changeLang:' + lang);
+      localStorage.setItem('lang',lang)
+      location.reload();
+    }
   }
 }
 </script>
